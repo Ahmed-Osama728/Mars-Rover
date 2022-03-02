@@ -24,13 +24,18 @@ module.exports = class Rover {
         this.turn(command);
       }
     }
+    var coordinateX = this.position[0];
+    var coordinateY = this.position[1];
+    console.log(`(${coordinateX}, ${coordinateY}) ${this.facing}`);
   }
 
   turn(command) {
     var cardinalIndex = this.directions.indexOf(this.facing);
     if (command == 'L') {
+      // turn left
       cardinalIndex = (cardinalIndex + 4 - 1) % 4;
     } else if (command == 'R') {
+      // turn right
       cardinalIndex = (cardinalIndex + 1) % 4;
     }
     this.facing = this.directions[cardinalIndex];

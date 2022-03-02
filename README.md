@@ -1,8 +1,8 @@
-# marsRover
+# Mars-Rover
 
 ## THE CODE AND LOGIC:
 
-### \* class rover:
+### class Rover:
 
 - setPath(): takes the given input data as commands and sets the path for rover.
 

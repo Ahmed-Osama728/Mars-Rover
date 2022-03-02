@@ -50,9 +50,23 @@ test('test mission runs according to the given commands and rover moves correctl
   expect(rover.position).toEqual([-1, 4]);
 });
 
-test('test mission runs according to the given commands and rover enter a coordinate with an obstacle', () => {
+test('test mission runs according to the given commands and rover enter a coordinate with the obstacle [7,4]', () => {
   let rover = new Rover(6, 4, 'EAST');
   rover.setPath('FF');
   rover.runMission();
   expect(rover.position).toEqual([6, 4]);
+});
+
+test('test mission runs according to the given commands and rover enter a coordinate with an obstacle [3,5]', () => {
+  let rover = new Rover(1, 2, 'NORTH');
+  rover.setPath('RFFLFFF');
+  rover.runMission();
+  expect(rover.position).toEqual([3, 4]);
+});
+
+test('test mission runs according to the given commands and rover enter a coordinate with an obstacle [1,4]', () => {
+  let rover = new Rover(1, 2, 'NORTH');
+  rover.setPath('FR');
+  rover.runMission();
+  expect(rover.position).toEqual([1, 3]);
 });
