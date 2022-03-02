@@ -14,8 +14,8 @@
 
 ## UNIT TESTS:
 
-For unit testing, I chose Jest which is a JavaScript test framework running on Node.js.
+For unit testing, I used Jest .
 
 - Functions from the class Rover were used for testing.
 - Find the written tests in "rover.test.js".
-- To execute test, simply run "npm test" in the terminal.
+- To execute test, run "npm test" in the terminal.

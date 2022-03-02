@@ -1,5 +1,7 @@
 const Rover = require('../src/rover');
 
+// Part 1
+
 test('test rover turns left', () => {
   let rover = new Rover(1, 1, 'NORTH');
   rover.turn('L');
@@ -50,6 +52,8 @@ test('test mission runs according to the given commands and rover moves correctl
   expect(rover.position).toEqual([-1, 4]);
 });
 
+// Part 2
+
 test('test mission runs according to the given commands and rover enter a coordinate with the obstacle [7,4]', () => {
   let rover = new Rover(6, 4, 'EAST');
   rover.setPath('FF');
@@ -69,4 +73,13 @@ test('test mission runs according to the given commands and rover enter a coordi
   rover.setPath('FR');
   rover.runMission();
   expect(rover.position).toEqual([1, 3]);
+});
+
+// Part 3
+
+test('test mission runs according to the given commands and rover will safely move to a coordinate [8,5] avoiding all obstacles', () => {
+  let rover = new Rover(1, 3, 'EAST');
+  rover.setPath('FFFLFFRFFFF');
+  rover.runMission();
+  expect(rover.position).toEqual([8, 5]);
 });
